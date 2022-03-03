@@ -15,6 +15,7 @@ app.use(connectRoute(function(router){
     });
 
     router.get("/user",function(req,resp){
+        
         resp.writeHead(200, {
             'Content-type':'text/html'
         });
