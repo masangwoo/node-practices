@@ -19,10 +19,32 @@ Node Practices
     3) 패키지 설치
         $[project-ex01] npm i ejs (local, general dependency)
         $[project-ex01] npm i -D nodemon (local, dev. dependency)
+        $[project-ex01] npm i -g gulp (local, dev. dependency)
+        $[project-ex01] npx gulp --version (설치 확인)
+    4) 패키지 삭제
+        $[project-ex01] npm un ejs (local install 삭제)
+        $[project-ex01] npm un -g gulp (global install 삭제)
+        $[project-ex01] npx gulp --version (삭제 확인)
 
+ 4. Node(javascript) Project(BE/FE Application, Package) 생성
+    1) 프로젝트 생성(mkdir)
+    2) 프로젝트 이동(cd)
+    3) 프로젝트 초기화 : 프로젝트 매니페스트 파일(package.json) 생성
+        $[project-ex02] npm init -y
 
- 4. Node Project(BE/FE) 생성
  5. Module
- 6. npmjs.com(npm registry)에 내 패키지 배포(생략, https://github.com/kickscar/javascript-practices/blob/main/TechNotes/javascript-practices/11.Development%20Environments/02.%20npm.md)
- 7. helloweb-ex01 (맨바닥)
- 8. helloweb-ex01 (express)
+    1) 코어 모듈(fs, os, ... , node에서 제공해주는 모듈)
+    2) 파일 모듈 : 파일 경로로 불러와서 모듈안의 함수, 객체를 사용한다.
+    3) npm 모듈 : npm를 통해서 node_module에 설치하고 사용하는 모듈
+        - 원격 배포
+        - 로컬 배포
+    
+ 6. npmjs.com의 npm registry에 내 패키지 배포(원격배포, 생략, https://github.com/kickscar/javascript-practices/blob/main/TechNotes/javascript-practices/11.Development%20Environments/02.%20npm.md)
+ 
+ 7. helloweb-ex01 : 웹애플리케이션 만들어보기 (맨바닥)
+    1) app01 : http : core module 기반
+    2) app02 : http, fs : core module 기반
+    3) app03 : connect, serve-static : npm package 기반
+    4) app04 : connect, serve-static, connect-route : npm package 기반
+ 
+ 8. helloweb-ex02 : 웹애플리케이션 만들어보기 (express 프레임워크)
